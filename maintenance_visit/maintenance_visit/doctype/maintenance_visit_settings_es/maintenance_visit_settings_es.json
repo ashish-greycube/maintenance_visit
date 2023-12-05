@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-29 06:55:45.158983",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "auto_visit_creation_setting",
+  "create_visit_prior_days"
+ ],
+ "fields": [
+  {
+   "fieldname": "auto_visit_creation_setting",
+   "fieldtype": "Heading",
+   "label": "Auto Visit Creation Setting"
+  },
+  {
+   "default": "1",
+   "description": "prior to how many days?",
+   "fieldname": "create_visit_prior_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Create On Site Visit",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-12-04 09:32:20.552873",
+ "modified_by": "Administrator",
+ "module": "Maintenance Visit",
+ "name": "Maintenance Visit Settings ES",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

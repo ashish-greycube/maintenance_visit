@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ODVR-.####",
+ "creation": "2023-11-29 10:45:19.140127",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "maintenance_visit_schedule",
+  "visit_type",
+  "customer",
+  "customer_address",
+  "column_break_0vah3",
+  "call_date",
+  "visit_date",
+  "visit_time",
+  "contact",
+  "phone_no",
+  "section_break_1duzl",
+  "visit_reason",
+  "section_break_yck99",
+  "on_site_visit_reference",
+  "column_break_jz4hf",
+  "on_site_visit_status",
+  "visit_schedule_detail_hex",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "maintenance_visit_schedule",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Maintenance Visit Schedule",
+   "options": "Maintenance Visit Schedule ES",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "maintenance_visit_schedule.visit_type",
+   "fieldname": "visit_type",
+   "fieldtype": "Data",
+   "label": "Visit Type"
+  },
+  {
+   "fetch_from": "maintenance_visit_schedule.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "column_break_0vah3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "call_date",
+   "fieldtype": "Date",
+   "label": "Call Date"
+  },
+  {
+   "fieldname": "visit_date",
+   "fieldtype": "Date",
+   "label": "Visit Date"
+  },
+  {
+   "default": "10:00:00.000000",
+   "fieldname": "visit_time",
+   "fieldtype": "Time",
+   "label": "Visit TIme"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Data",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "section_break_1duzl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "visit_reason",
+   "fieldtype": "Small Text",
+   "label": "Visit Reason"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "On Demand Visit Request ES",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "maintenance_visit_schedule.customer_address",
+   "fieldname": "customer_address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "on_site_visit_status",
+   "fieldtype": "Select",
+   "label": "On Site Visit Status",
+   "options": "\nOpen\nCompleted\nPartially Completed\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_yck99",
+   "fieldtype": "Section Break",
+   "label": "On Site Visit Detail"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "on_site_visit_reference",
+   "fieldtype": "Data",
+   "label": "On Site Visit Reference",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_jz4hf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "visit_schedule_detail_hex",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-05 12:18:35.843430",
+ "modified_by": "Administrator",
+ "module": "Maintenance Visit",
+ "name": "On Demand Visit Request ES",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

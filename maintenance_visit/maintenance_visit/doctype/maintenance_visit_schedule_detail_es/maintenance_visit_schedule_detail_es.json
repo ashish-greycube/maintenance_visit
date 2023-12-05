@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-11-29 07:17:58.908483",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "scheduled_date",
+  "scheduled_day",
+  "scheduled_time",
+  "on_site_visit_reference",
+  "status",
+  "actual_date",
+  "on_demand_visit_ref"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Scheduled Date"
+  },
+  {
+   "columns": 1,
+   "fieldname": "scheduled_day",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Day"
+  },
+  {
+   "columns": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "On Site Status",
+   "options": "\nOpen\nCompleted\nPartially Completed\nCancelled",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "actual_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Actual Date",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "on_site_visit_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "On Site Ref",
+   "options": "On Site Visit ES",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "on_demand_visit_ref",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "On Demand Ref",
+   "options": "On Demand Visit Request ES",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "default": "10:00:00.000000",
+   "fieldname": "scheduled_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Time"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-05 12:11:33.635934",
+ "modified_by": "Administrator",
+ "module": "Maintenance Visit",
+ "name": "Maintenance Visit Schedule Detail ES",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -129,23 +129,23 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-#	"all": [
-#		"maintenance_visit.tasks.all"
-#	],
-#	"daily": [
-#		"maintenance_visit.tasks.daily"
-#	],
-#	"hourly": [
-#		"maintenance_visit.tasks.hourly"
-#	],
-#	"weekly": [
-#		"maintenance_visit.tasks.weekly"
-#	],
-#	"monthly": [
-#		"maintenance_visit.tasks.monthly"
-#	],
-# }
+scheduler_events = {
+	# "all": [
+	# 	"maintenance_visit.tasks.all"
+	# ],
+	"daily": [
+		"maintenance_visit.maintenance_visit.doctype.maintenance_visit_schedule_es.maintenance_visit_schedule_es.create_on_site_visit_as_per_schedule"
+	],
+	# "hourly": [
+	# 	"maintenance_visit.tasks.hourly"
+	# ],
+	# "weekly": [
+	# 	"maintenance_visit.tasks.weekly"
+	# ],
+	# "monthly": [
+	# 	"maintenance_visit.tasks.monthly"
+	# ],
+}
 
 # Testing
 # -------

@@ -1,0 +1,195 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "OSV-.####",
+ "creation": "2023-11-29 07:34:22.838449",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "visit_schedule_reference",
+  "sales_order",
+  "material_issue",
+  "on_demand_visit_request_reference",
+  "visit_schedule_detail_hex",
+  "column_break_gablx",
+  "assign_to",
+  "visit_date",
+  "visit_time",
+  "visit_status",
+  "section_break_prrk5",
+  "visit_reason",
+  "column_break_xq8rg",
+  "customer_address",
+  "section_break_jvtpc",
+  "service_activites",
+  "section_break_ockyv",
+  "consumed_materials",
+  "section_break_0zd0p",
+  "client_signature",
+  "column_break_ceoxx",
+  "work_done",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "visit_schedule_reference.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "visit_schedule_reference",
+   "fieldtype": "Link",
+   "label": "Visit Schedule Reference",
+   "options": "Maintenance Visit Schedule ES"
+  },
+  {
+   "fieldname": "visit_reason",
+   "fieldtype": "Small Text",
+   "label": "Visit Reason"
+  },
+  {
+   "fieldname": "column_break_gablx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "visit_date",
+   "fieldtype": "Date",
+   "label": "Visit Date"
+  },
+  {
+   "fieldname": "visit_status",
+   "fieldtype": "Select",
+   "label": "Visit Status",
+   "options": "\nOpen\nCompleted\nPartially Completed\nCancelled"
+  },
+  {
+   "fetch_from": "visit_schedule_reference.customer_address",
+   "fieldname": "customer_address",
+   "fieldtype": "Small Text",
+   "label": "Customer Address"
+  },
+  {
+   "fieldname": "section_break_jvtpc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ockyv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_0zd0p",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "client_signature",
+   "fieldtype": "Signature",
+   "label": "Client Signature"
+  },
+  {
+   "fieldname": "column_break_ceoxx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "work_done",
+   "fieldtype": "Small Text",
+   "label": "Work Done"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "On Site Visit ES",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "assign_to",
+   "fieldtype": "Link",
+   "label": "Assign To",
+   "options": "Employee"
+  },
+  {
+   "default": "10:00:00.000000",
+   "fieldname": "visit_time",
+   "fieldtype": "Time",
+   "label": "Visit Time"
+  },
+  {
+   "fieldname": "service_activites",
+   "fieldtype": "Table",
+   "label": "Service Activity",
+   "options": "Service Activity Detail ES"
+  },
+  {
+   "fieldname": "consumed_materials",
+   "fieldtype": "Table",
+   "label": "Consumed Material",
+   "options": "Consumed Material Detail ES"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "material_issue",
+   "fieldtype": "Link",
+   "label": "Material Issue",
+   "options": "Stock Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_prrk5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_xq8rg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "visit_schedule_detail_hex",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "on_demand_visit_request_reference",
+   "fieldtype": "Data",
+   "label": "On Demand Visit Request Reference",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-12-05 12:25:55.801271",
+ "modified_by": "Administrator",
+ "module": "Maintenance Visit",
+ "name": "On Site Visit ES",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
