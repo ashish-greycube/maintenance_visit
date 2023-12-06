@@ -15,6 +15,17 @@ class OnDemandVisitRequestES(Document):
 			# todo  contact, phone <-- copy to On site?
 			doc.visit_reason=self.visit_reason
 			doc.visit_status='Open'
+			sales_order_name = frappe.db.get_value('Maintenance Visit Schedule ES', self.maintenance_visit_schedule, 'sales_order')
+			print('sales_order_name',sales_order_name)
+			if sales_order_name:
+				doc.sales_order=sales_order_name
+				sales_order=frappe.get_doc('Sales Order',sales_order_name)
+				for so_item in sales_order.get('items'):
+					service_item=doc.append('service_activites')
+					service_item.item_code=so_item.item_code
+					service_item.item_name=so_item.item_name
+					service_item.qty=so_item.qty
+					# service_item.activity_status=			
 			doc.run_method('set_missing_values')
 			doc.save(ignore_permissions=True)
 			doc.add_comment('Comment', text='Auto created by on demand visit request {0} on {1}'.format(self.name,today()))
@@ -35,7 +46,7 @@ class OnDemandVisitRequestES(Document):
 				mvs.add_comment('Comment', text='Auto created  row no {0} for on demand visit request {1}'.format(mvs_detail_list[0].idx,self.name))
 				frappe.db.set_value('On Site Visit ES', doc.name, 'visit_schedule_detail_hex', mvs_detail_list[0].name)
 				frappe.db.set_value('On Demand Visit Request ES', self.name, 'on_site_visit_reference', doc.name)
-				frappe.db.set_value('On Demand Visit Request ES', self.name, 'on_site_visit_reference', 'Open')
+				frappe.db.set_value('On Demand Visit Request ES', self.name, 'on_site_visit_status', 'Open')
 				frappe.db.set_value('On Demand Visit Request ES', self.name, 'visit_schedule_detail_hex', mvs_detail_list[0].name)
 
 

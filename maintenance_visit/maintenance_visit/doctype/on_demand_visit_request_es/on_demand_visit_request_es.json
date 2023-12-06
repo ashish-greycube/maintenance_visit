@@ -7,9 +7,9 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "customer",
   "maintenance_visit_schedule",
   "visit_type",
-  "customer",
   "customer_address",
   "column_break_0vah3",
   "call_date",
@@ -39,14 +39,16 @@
    "fetch_from": "maintenance_visit_schedule.visit_type",
    "fieldname": "visit_type",
    "fieldtype": "Data",
-   "label": "Visit Type"
+   "label": "Visit Type",
+   "read_only": 1
   },
   {
    "fetch_from": "maintenance_visit_schedule.customer",
    "fieldname": "customer",
    "fieldtype": "Link",
    "label": "Customer",
-   "options": "Customer"
+   "options": "Customer",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_0vah3",
@@ -61,7 +63,8 @@
   {
    "fieldname": "visit_date",
    "fieldtype": "Date",
-   "label": "Visit Date"
+   "label": "Visit Date",
+   "reqd": 1
   },
   {
    "default": "10:00:00.000000",
@@ -138,7 +141,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-12-05 12:18:35.843430",
+ "modified": "2023-12-06 16:27:46.676830",
  "modified_by": "Administrator",
  "module": "Maintenance Visit",
  "name": "On Demand Visit Request ES",

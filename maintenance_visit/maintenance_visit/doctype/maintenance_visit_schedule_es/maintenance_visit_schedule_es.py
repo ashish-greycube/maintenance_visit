@@ -101,10 +101,10 @@ def create_on_site_visit_as_per_schedule():
 
 @frappe.whitelist()
 def get_customer_address(customer_name):
+	address_display = ""
 	default_address=get_default_address('Customer',customer_name)
 	print(default_address,'default_address')
 	if default_address:
-		address_display = ""
 		address = frappe.get_doc("Address", default_address)
 		address_display=get_condensed_address(address)
 	print('address_display',address_display)	

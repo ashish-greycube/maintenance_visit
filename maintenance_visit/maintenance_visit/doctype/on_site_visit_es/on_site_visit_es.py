@@ -23,7 +23,9 @@ class OnSiteVisitES(Document):
 			self.material_issue=material_issue
 			frappe.db.set_value('On Site Visit ES', self.name, 'material_issue', material_issue) 
 		# copy visit_date back
+		print(self.visit_schedule_detail_hex,self.visit_status,self.on_demand_visit_request_reference)
 		frappe.db.set_value('Maintenance Visit Schedule Detail ES', self.visit_schedule_detail_hex, 'status', self.visit_status) 
+		frappe.db.set_value('Maintenance Visit Schedule Detail ES', self.visit_schedule_detail_hex, 'actual_date', self.visit_date)
 		frappe.db.set_value('On Demand Visit Request ES', self.on_demand_visit_request_reference, 'on_site_visit_status', self.visit_status)
 
 

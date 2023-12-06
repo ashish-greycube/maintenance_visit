@@ -7,7 +7,8 @@ frappe.ui.form.on('On Demand Visit Request ES', {
 			return {
 				filters: {
 					visit_type: 'Random',
-					contract_status : 'Active'
+					contract_status : 'Active',
+					customer:frm.doc.customer
 				}
 			}
 		})
